@@ -61,15 +61,15 @@ def main():
             if predicted_class == "Low":
                 color = "#d4edda"  # light green
                 text_color = "#155724"
-                message = "✅ The hate word is **not severe**, but try to avoid using hate speech."
+                message = "✅ The word appears not be hate speech or low hate speech, but try to avoid using hate speech."
             elif predicted_class == "Medium":
                 color = "#fff3cd"  # light yellow
                 text_color = "#856404"
-                message = "⚠️ This word is **hate speech** and is somewhat severe. Please avoid such words."
+                message = "⚠️ This word is hate speech and is somewhat severe. Please avoid such words."
             else:  # High
                 color = "#f8d7da"  # light red
                 text_color = "#721c24"
-                message = "🚫 This statement contains **highly severe hate speech** and has been flagged. You are **restricted** from saying this."
+                message = "🚫 This statement contains highly severe hate speech and has been flagged. You can get purnished for using such words."
 
             # Styled output box
             st.markdown(
