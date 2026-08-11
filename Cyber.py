@@ -22,6 +22,8 @@ file_path = os.path.join(script_dir, 'myDataset.xlsx')
 
 # Load model and dataset
 loaded_model = load(model_path)
+if isinstance(loaded_model, SVC) and not hasattr(loaded_model, '_effective_probability'):
+    loaded_model._effective_probability = getattr(loaded_model, 'probability', False)
 df = pd.read_excel(file_path)
 
 # Load stopwords

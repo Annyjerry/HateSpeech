@@ -1,54 +1,41 @@
-# 🧠 Hate Speech Detection System
+#  Hate Speech Detection System
 
-This is a Streamlit web application for detecting and classifying hate speech from user input text using a Support Vector Machine (SVM) model.
+A Streamlit web app that classifies user input text into **Low**, **Medium**, or **High** severity levels of hate speech, using a trained SVM model with TF-IDF feature extraction.
 
-It categorizes text into three levels of severity — Low, Medium, and High — with color-coded warnings and explanations.
+🔗 Live demo: https://hatespeech-classifier.streamlit.app
 
+⚠️ **Disclaimer**
+This is an educational/research project. The model was trained on a limited dataset and is not suitable for real-world content moderation without further validation. It may reflect biases present in the training data.
 
+## Features
+- 🟢 Low: mild or non-hate speech, flagged with a gentle caution
+- 🟡 Medium: moderate severity, flagged with a warning
+- 🔴 High: strongly offensive or harmful, flagged clearly
 
-## 🚀 Features
-
-- 🟢 Low: Indicates mild or non-hate speech.  
-  _"The word appears not to be hate speech, but try to avoid using hate-related terms."_
-
-- 🟡 Medium: Indicates moderate hate speech severity.  
-  _"This word is hate speech and somewhat severe. Please avoid such words."_
-
-- 🔴 High: Indicates strongly offensive or harmful hate speech.  
-  _"This statement contains highly severe hate speech and has been flagged. You can get punished for using such words."_
-
-
-
-## 🧩 Technologies Used
-
+## Tech Stack
 - Python 3.11+
-- Streamlit — for building the web interface  
-- NLTK — for stopword removal and text preprocessing  
-- Pandas — for data handling and loading dataset  
-- Scikit-learn (SVM) — for the machine learning model  
-- Joblib — for saving and loading the trained model  
-- OpenPyXL — for reading Excel datasets
+- Streamlit — web interface
+- NLTK — text preprocessing (stopword removal, tokenization)
+- Scikit-learn (SVM) — classification model
+- TF-IDF — feature extraction
+- Joblib — model persistence
+- OpenPyXL — reading the training dataset
 
-⚙️ Installation and Setup
-
-1️⃣ Clone the repository
-bash
+## Installation
+```bash
 git clone https://github.com/Annyjerry/HateSpeech.git
-cd hate-speech-detection
+cd HateSpeech
 
 python -m venv venv
-source venv/bin/activate   # On Windows: venv\Scripts\activate
+source venv/bin/activate  # Windows: venv\Scripts\activate
 
 pip install -r requirements.txt
-
 streamlit run Cyber.py
+```
 
-👨‍💻 Author
-Name: Anny Jerry
-Created: January 2024
-Updated: October 2025
+## Author
+Aniebiet Jeremiah
+Created: January 2024 · Updated: October 2025
 
-🛡️ License
-
-This project is licensed under the MIT License — you can freely use and modify it for educational and research purposes.
-
+## License
+MIT License — free to use and modify for educational and research purposes.
